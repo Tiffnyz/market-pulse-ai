@@ -6,7 +6,7 @@ Market Pulse AI is a data pipeline and dashboard that generates stock market sig
 
 The project follows a multi-step data processing pipeline:
 
-1.  **Scrape:** Fetches recent financial news articles from RSS feeds (Yahoo Finance, MarketWatch) and the News API.
+1.  **Scrape:** Fetches recent financial news articles from RSS feeds (Yahoo Finance, MarketWatch) and NewsAPI.
 2.  **Map Tickers:** Scans the title and summary of each article for company names, aliases, and stock tickers defined in the watchlist. It creates a new dataset mapping each relevant article to its corresponding ticker.
 3.  **Sentiment Analysis:** Uses the `ProsusAI/finbert` model to calculate a sentiment score (from -1 for negative to +1 for positive) for each mapped article.
 4.  **Signal Generation:** Aggregates sentiment scores by ticker on an hourly basis. It then calculates the change (delta) in average sentiment from the previous hour. A significant positive or negative delta triggers a BUY or SELL signal, respectively.
