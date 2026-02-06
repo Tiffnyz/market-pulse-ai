@@ -1,4 +1,4 @@
-# Market Pulse AI
+# Market Pulse AI 📈📰
 
 Market Pulse AI is a data pipeline and dashboard that generates stock market signals based on sentiment analysis of financial news. It scrapes news articles from various sources, associates them with specific stock tickers, analyzes the sentiment of each article using a FinBERT model, and generates hourly BUY/SELL/HOLD signals based on significant changes in sentiment.
 
